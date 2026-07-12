@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scroll Infini — Clone Unsplash</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <button class="scroll-to-top" aria-label="Retour en haut">
+      <img src="images/arrow.svg" alt="" />
+    </button>
+    <header>
+      <div class="header-inner">
+        <p class="header-eyebrow">Galerie visuelle</p>
+        <h1>Clone <em>Unsplash</em></h1>
+        <p class="header-sub">
+          Des millions d'images libres de droits, à portée de scroll.
+        </p>
+      </div>
+      <form class="search-form">
+        <div class="search-wrapper">
+          <label for="search">Rechercher</label>
+          <div class="input-row">
+            <input
+              type="text"
+              id="search"
+              placeholder="architecture, nature, portrait…"
+              autocomplete="off"
+            />
+            <button type="submit" class="search-btn">→</button>
+          </div>
+        </div>
+      </form>
+    </header>
+
+    <main class="container">
+      <div class="search-status">
+        <span class="current-query"></span>
+      </div>
+
+      <p class="error-msg" role="alert"></p>
+
+      <div class="images-list"></div>
+
+      <div class="loader" aria-live="polite">
+        <span></span><span></span><span></span>
+      </div>
+
+      <div class="infinite-marker"></div>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
